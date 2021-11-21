@@ -3,13 +3,14 @@
   "version": "0.1.0",
   "private": true,
   "scripts": {
-    "serve": "vue-cli-service serve",
+    "dev": "vue-cli-service serve",
     "build": "vue-cli-service build",
     "lint": "vue-cli-service lint"
   },
   "dependencies": {
     "core-js": "^3.19.1",
     "vue": "^3.2.22",
+    "vue-loader-v16": "^16.0.0-beta.5.4",
     "vue-router": "^4.0.12"
   },
   "devDependencies": {
