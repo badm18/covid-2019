@@ -76,6 +76,9 @@
     text-align: center;
     background: url('../assets/logo.svg') no-repeat center center;
 }
+html {
+    overflow-y: auto;
+}
 body {
     font-family: Lato-Bold, Arial, sans-serif;
     color: #0b1f33;
