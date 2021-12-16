@@ -5,12 +5,11 @@ import router from "./router";
 
 import vuetify from "./plugins/vuetify";
 
-import mixins from './utils/mixins'
+import mixins from "./utils/mixins";
 
 import "./styles/index.css";
 
 const initApp = async () => {
-
   Vue.mixin({
     methods: {
       ...mixins,
