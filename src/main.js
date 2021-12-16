@@ -9,8 +9,6 @@ import mixins from './utils/mixins'
 
 import "./styles/index.css";
 
-// createApp(App).use(router).mount("#app");
-
 const initApp = async () => {
 
   Vue.mixin({

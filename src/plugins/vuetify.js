@@ -1,7 +1,7 @@
-import Vue from 'vue';
-import Vuetify from 'vuetify/lib';
+import Vue from "vue";
+import Vuetify from "vuetify/lib";
 
-import vuetifyConfig from '../config/vuetifyConfig';
+import vuetifyConfig from "../config/vuetifyConfig";
 
 Vue.use(Vuetify);
 

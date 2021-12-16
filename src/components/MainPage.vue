@@ -1,25 +1,17 @@
 <template>
   <div class="vaccine-result">
     <div
-      class="
-        flex-container
-        ml-6
-        mr-6
-        justify-between
-        align-items-center
-        mt-52
-        mb-32
-      "
+      class="flex-container ml-6 mr-6 justify-between align-items-center mt-52 mb-32"
     >
       <div class="ml-24">
         <a href="https://www.gosuslugi.ru/" class="logo" />
       </div>
       <div
-        onclick="APP.toogleLang()"
         class="translate-button flex-container mt-6 mr-24 align-items-center"
+        @click="switchLang"
       >
         <div class="mr-8">
-          <div class="lang-image ru">
+          <div :class="`lang-image ${$vuetify.lang.current}`">
             <div class="lang-en">
               <svg
                 width="24"
@@ -147,7 +139,7 @@
             </div>
           </div>
         </div>
-        <div class="lang">RUS</div>
+        <div class="lang">{{ getLangText("currentLang") }}</div>
       </div>
     </div>
     <div>
@@ -219,11 +211,13 @@
         </div>
         <div class="status-container-inner">
           <h4 class="title-h4 white status-title main-title">
-            Сертификат вакцинации от COVID-19
+            {{ getLangText("title") }}
           </h4>
           <div class="status mt-12 text-plain small-text bold">
             <span class="status-value hide not-found"></span>
-            <span class="status-value cert-name">Действителен</span>
+            <span class="status-value cert-name">{{
+              getLangText("valid")
+            }}</span>
           </div>
           <h4 class="title-h4 white status-title mt-12">
             <span class="num-symbol">№&nbsp;</span>
@@ -289,28 +283,36 @@
               ></path>
             </svg>
           </div>
-          <div class="small-text gray mr-4">Действует до:</div>
+          <div class="small-text gray mr-4">{{ getLangText("expired") }}</div>
           <div class="small-text gray">29.07.2022</div>
         </div>
       </div>
       <div class="person-data person-data-attrs mt-24">
         <div class="mb-4 person-data-wrap attr-wrap">
-          <div class="small-text mb-4 mr-4 attr-title hide">ФИО:</div>
+          <div class="small-text mb-4 mr-4 attr-title hide">
+            {{ getLangText("fullName") }}
+          </div>
           <div class="attrValue title-h6 bold text-center">
             Ш****** М***** С********
           </div>
         </div>
         <div class="mb-4 person-data-wrap attr-wrap">
-          <div class="small-text mb-4 mr-4 attr-title">Дата рождения:</div>
+          <div class="small-text mb-4 mr-4 attr-title">
+            {{ getLangText("birthday") }}
+          </div>
           <div class="attrValue small-text gray">14.06.2000</div>
         </div>
         <div class="mb-4 person-data-wrap attr-wrap">
-          <div class="small-text mb-4 mr-4 attr-title">Паспорт:</div>
+          <div class="small-text mb-4 mr-4 attr-title">
+            {{ getLangText("passport") }}
+          </div>
           <div class="attrValue small-text gray">78** ***119</div>
         </div>
       </div>
       <div class="mt-24">
-        <a href="https://www.gosuslugi.ru/" class="button close">Закрыть</a>
+        <a href="https://www.gosuslugi.ru/" class="button close">{{
+          getLangText("close")
+        }}</a>
       </div>
     </div>
   </div>
@@ -321,6 +323,12 @@ export default {
   name: "MainPage",
   props: {
     msg: String,
+  },
+  methods: {
+    switchLang() {
+      this.$vuetify.lang.current =
+        this.$vuetify.lang.current === "ru" ? "en" : "ru";
+    },
   },
   mounted() {
     // this.$router.push("");
