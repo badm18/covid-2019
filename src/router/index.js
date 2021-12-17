@@ -11,7 +11,6 @@ const routes = [
     },
   },
   {
-    // /covid-cert/verify/9760000032456653?lang=en&ck=9ae02b4edfb0f39a2e6ac9b5056d2da5
     path: "/covid-cert/verify/:id/",
     name: "Myself",
     component: MainPage,
