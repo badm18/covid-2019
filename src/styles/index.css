@@ -76,6 +76,9 @@
     text-align: center;
     background: url('../assets/logo.svg') no-repeat center center;
 }
+.loaded {
+    display: none;
+}
 html {
     overflow-y: auto;
 }
