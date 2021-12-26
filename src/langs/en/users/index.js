@@ -5,4 +5,10 @@ export default {
     dateOfBirth: "28.11.2000",
     passport: "78** ***119",
   },
+  "2aq02q4en2b03f39b2f6af9s4526d2das": {
+    certificateNumber: "9264 0200 1345 1883",
+    fullName: "I******* O**** M*********",
+    dateOfBirth: "20.01.1999",
+    passport: "76** ***224",
+  }
 };

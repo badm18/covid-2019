@@ -15,7 +15,10 @@ export default {
     currentId: "",
     currentCk: "",
     legalId: "986000131454623",
-    usersCk: ["1az02q4ed2b0hf39b2e6af9b5156d2da5"],
+    usersCk: [
+      "1az02q4ed2b0hf39b2e6af9b5156d2da5",
+      "2aq02q4en2b03f39b2f6af9s4526d2das",
+    ],
   }),
   computed: {
     isUserValid() {
